@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="back" alignment="CENTER" focusTraversable="true" style="-fx-background-color: #5260a1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <GridPane fx:id="lugia" alignment="CENTER" onMouseClicked="#selectPokemon1">
+         <children>
+            <Label fx:id="nombre1" text="Lugia" textFill="WHITE" />
+            <Label fx:id="nivel1" text="Nv 79" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+            <ProgressBar fx:id="bar1" prefWidth="200.0" progress="0.82" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <Label fx:id="salud1" prefHeight="17.0" prefWidth="52.0" text="230/298" textFill="WHITE" GridPane.rowIndex="3" />
+            <Label layoutX="10.0" layoutY="107.0" text="PS" textAlignment="CENTER" textFill="#d2e550" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <CheckBox alignment="CENTER" disable="true" focusTraversable="false" mnemonicParsing="false" selected="true" textFill="#20ff07" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <ImageView fitHeight="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <image>
+                  <Image url="file:/C:/Users/jaime/Desktop/diseños/pokemon/lugia.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport></ImageView>
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+      <GridPane fx:id="sylveon" layoutX="10.0" layoutY="10.0" onMouseClicked="#selectPokemon2" GridPane.columnIndex="1">
+         <children>
+            <Label fx:id="nombre2" text="Sylveon" textFill="WHITE" />
+            <Label fx:id="nivel2" text="Nv 57" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+            <ProgressBar fx:id="bar2" prefWidth="200.0" progress="0.96" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <Label fx:id="salud2" prefHeight="17.0" prefWidth="55.0" text="150/175" textFill="WHITE" GridPane.rowIndex="3" />
+            <Label layoutX="10.0" layoutY="107.0" text="PS" textFill="#d2e550" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <CheckBox alignment="CENTER" disable="true" focusTraversable="false" mnemonicParsing="false" selected="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <ImageView fitHeight="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <image>
+                  <Image url="file:/C:/Users/jaime/Desktop/diseños/pokemon/sylveon.png" />
+               </image></ImageView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+      <GridPane fx:id="ditto" layoutX="220.0" layoutY="10.0" onMouseClicked="#selectPokemon3" GridPane.columnIndex="2">
+         <children>
+            <Label fx:id="nombre3" text="Ditto" textFill="WHITE" />
+            <Label fx:id="nivel3" text="Nv 53" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+            <ProgressBar fx:id="bar3" prefWidth="200.0" progress="0.18" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <Label fx:id="salud3" prefHeight="17.0" prefWidth="51.0" text="50/180" textFill="WHITE" GridPane.rowIndex="3" />
+            <Label layoutX="10.0" layoutY="107.0" text="PS" textFill="#d2e550" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <CheckBox alignment="CENTER" disable="true" focusTraversable="false" mnemonicParsing="false" selected="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <ImageView fitHeight="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <image>
+                  <Image url="file:/C:/Users/jaime/Desktop/diseños/pokemon/ditto.png" />
+               </image></ImageView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+      <GridPane fx:id="metapod" layoutX="220.0" layoutY="10.0" onMouseClicked="#selectPokemon4" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="nombre4" text="Metapod" textFill="WHITE" />
+            <Label fx:id="nivel4" text="Nv 100" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+            <ProgressBar fx:id="bar4" prefWidth="200.0" progress="1.0" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <Label fx:id="salud4" prefHeight="17.0" prefWidth="49.0" text="500/500" textFill="WHITE" GridPane.rowIndex="3" />
+            <Label layoutX="10.0" layoutY="107.0" text="PS" textFill="#d2e550" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <CheckBox alignment="CENTER" disable="true" focusTraversable="false" mnemonicParsing="false" selected="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <ImageView fitHeight="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <image>
+                  <Image url="file:/C:/Users/jaime/Desktop/diseños/pokemon/metapod.png" />
+               </image></ImageView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+      <GridPane fx:id="mew" layoutX="10.0" layoutY="135.0" onMouseClicked="#selectPokemon5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="nombre5" text="Mew" textFill="WHITE" />
+            <Label fx:id="nivel5" text="Nv 42" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+            <ProgressBar fx:id="bar5" prefWidth="200.0" progress="0.45" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <Label fx:id="salud5" prefHeight="17.0" prefWidth="46.0" text="80/220" textFill="WHITE" GridPane.rowIndex="3" />
+            <Label layoutX="10.0" layoutY="107.0" text="PS" textFill="#d2e550" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <CheckBox alignment="CENTER" disable="true" focusTraversable="false" mnemonicParsing="false" selected="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <ImageView fitHeight="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <image>
+                  <Image url="file:/C:/Users/jaime/Desktop/diseños/pokemon/mew.png" />
+               </image></ImageView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+      <GridPane fx:id="magikarp" layoutX="220.0" layoutY="135.0" onMouseClicked="#selectPokemon6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="nombre6" text="Magikarp" textFill="WHITE" />
+            <Label fx:id="nivel6" prefHeight="17.0" prefWidth="64.0" text="Nv ∞" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+            <ProgressBar fx:id="bar6" prefWidth="200.0" progress="1.0" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <Label fx:id="salud6" prefHeight="17.0" prefWidth="131.0" text="∞/∞" textFill="WHITE" GridPane.rowIndex="3" />
+            <Label layoutX="10.0" layoutY="107.0" text="PS" textFill="#d2e550" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <CheckBox alignment="CENTER" disable="true" focusTraversable="false" mnemonicParsing="false" selected="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <ImageView fitHeight="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <image>
+                  <Image url="file:/C:/Users/jaime/Desktop/diseños/pokemon/magikarp.png" />
+               </image></ImageView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+      <Label fx:id="salir" disable="true" text="Salir" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <GridPane.margin>
+            <Insets right="20.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="elegir" text="Elgir un pokémon" textFill="WHITE" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+   </padding>
+   <cursor>
+      <Cursor fx:constant="CROSSHAIR" />
+   </cursor>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
