@@ -168,9 +168,9 @@
       <GridPane fx:id="magikarp" layoutX="220.0" layoutY="135.0" onMouseClicked="#selectPokemon6" GridPane.columnIndex="2" GridPane.rowIndex="1">
          <children>
             <Label fx:id="nombre6" text="Magikarp" textFill="WHITE" />
-            <Label fx:id="nivel6" prefHeight="17.0" prefWidth="64.0" text="Nv ∞" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+            <Label fx:id="nivel6" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="137.0" text="Nv ∞" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
             <ProgressBar fx:id="bar6" prefWidth="200.0" progress="1.0" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-            <Label fx:id="salud6" prefHeight="17.0" prefWidth="131.0" text="∞/∞" textFill="WHITE" GridPane.rowIndex="3" />
+            <Label fx:id="salud6" prefHeight="17.0" prefWidth="84.0" text="∞/∞" textFill="WHITE" GridPane.rowIndex="3" />
             <Label layoutX="10.0" layoutY="107.0" text="PS" textFill="#d2e550" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -185,8 +185,8 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
          <columnConstraints>
-            <ColumnConstraints />
-            <ColumnConstraints />
+            <ColumnConstraints maxWidth="125.0" minWidth="59.0" prefWidth="101.0" />
+            <ColumnConstraints maxWidth="141.0" minWidth="75.0" prefWidth="99.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints />
@@ -195,7 +195,7 @@
             <RowConstraints />
          </rowConstraints>
       </GridPane>
-      <Label fx:id="salir" disable="true" text="Salir" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+      <Label fx:id="siguiente" disable="true" text="Siguiente" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
