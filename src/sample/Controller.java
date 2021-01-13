@@ -15,6 +15,7 @@ import java.io.IOException;
 public class Controller {
 
     //ELEMENTOS DE LUGIA
+    Pokemon pk1 = new Pokemon("Lugia", 79, 298, 0);
     @FXML
     public GridPane lugia;
     @FXML
@@ -27,6 +28,7 @@ public class Controller {
     public Label salud1;
 
     //ELEMENTOS DE SYLVEON
+    Pokemon pk2 = new Pokemon("Sylveon", 57, 175, 150);
     @FXML
     private GridPane sylveon;
     @FXML
@@ -39,6 +41,7 @@ public class Controller {
     public Label salud2;
 
     //ELEMENTOS DE DITTO
+    Pokemon pk3 = new Pokemon("Ditto", 53, 180, 50);
     @FXML
     private GridPane ditto;
     @FXML
@@ -51,6 +54,7 @@ public class Controller {
     public Label salud3;
 
     //ELEMENTOS DE METAPOD
+    Pokemon pk4 = new Pokemon("Metapod", 100, 500, 500);
     @FXML
     private GridPane metapod;
     @FXML
@@ -63,6 +67,7 @@ public class Controller {
     public Label salud4;
 
     //ELEMENTOS DE MEW
+    Pokemon pk5 = new Pokemon("Mew", 42, 220, 80);
     @FXML
     private GridPane mew;
     @FXML
@@ -75,6 +80,7 @@ public class Controller {
     public Label salud5;
 
     //ELEMENTOS DE MAGIKARP
+    Pokemon pk6 = new Pokemon("Magikarp", 50000, 50000, 50000);
     @FXML
     private GridPane magikarp;
     @FXML
@@ -94,37 +100,31 @@ public class Controller {
     public void initialize() {
 
         //OBTENCION DE DATOS DE LOS POKEMONES
-        Pokemon pk1 = new Pokemon("Lugia", 79, 298, 0);
         nombre1.setText(pk1.getNombre());
         nivel1.setText("Nv "+pk1.getNivel());
         bar1.setProgress((float) pk1.getVidaRestante()/ (float) pk1.getVidaTotal());
         salud1.setText(pk1.getVidaRestante() +"/"+ pk1.getVidaTotal());
 
-        Pokemon pk2 = new Pokemon("Sylveon", 57, 175, 150);
         nombre2.setText(pk2.getNombre());
         nivel2.setText("Nv "+ pk2.getNivel());
         bar2.setProgress((float) pk2.getVidaRestante()/(float) pk2.getVidaTotal());
         salud2.setText(pk2.getVidaRestante() +"/"+ pk2.getVidaTotal());
 
-        Pokemon pk3 = new Pokemon("Ditto", 53, 180, 50);
         nombre3.setText(pk3.getNombre());
         nivel3.setText("Nv "+ pk3.getNivel());
         bar3.setProgress((float) pk3.getVidaRestante()/(float) pk3.getVidaTotal());
         salud3.setText(pk3.getVidaRestante() +"/"+ pk3.getVidaTotal());
 
-        Pokemon pk4 = new Pokemon("Metapod", 100, 500, 500);
         nombre4.setText(pk4.getNombre());
         nivel4.setText("Nv "+ pk4.getNivel());
         bar4.setProgress((float) pk4.getVidaRestante()/(float) pk4.getVidaTotal());
         salud4.setText(pk4.getVidaRestante() +"/"+ pk4.getVidaTotal());
 
-        Pokemon pk5 = new Pokemon("Mew", 42, 220, 80);
         nombre5.setText(pk5.getNombre());
         nivel5.setText("Nv "+ pk5.getNivel());
         bar5.setProgress((float) pk5.getVidaRestante()/(float) pk5.getVidaTotal());
         salud5.setText(pk5.getVidaRestante() +"/"+ pk5.getVidaTotal());
 
-        Pokemon pk6 = new Pokemon("Magikarp", 50000, 50000, 50000);
         nombre6.setText(pk6.getNombre());
         nivel6.setText("Nv "+ pk6.getNivel());
         bar6.setProgress((float) pk6.getVidaRestante()/(float) pk6.getVidaTotal());
@@ -137,6 +137,7 @@ public class Controller {
     @FXML
     public void selectPokemon1(){
         vaciarSeleccion();
+        pk1.setSeleccionado(true);
         if(salud1.getText().charAt(0)=='0'){
             lugia.setStyle("-fx-background-color:  #E38F6D");
             siguiente.setDisable(true);
@@ -148,6 +149,7 @@ public class Controller {
     @FXML
     public void selectPokemon2(){
         vaciarSeleccion();
+        pk2.setSeleccionado(true);
         if(salud2.getText().charAt(0)=='0'){
             sylveon.setStyle("-fx-background-color:  #E38F6D");
             siguiente.setDisable(true);
@@ -159,6 +161,7 @@ public class Controller {
     @FXML
     public void selectPokemon3(){
         vaciarSeleccion();
+        pk3.setSeleccionado(true);
         if(salud3.getText().charAt(0)=='0'){
             ditto.setStyle("-fx-background-color:  #E38F6D");
             siguiente.setDisable(true);
@@ -170,6 +173,7 @@ public class Controller {
     @FXML
     public void selectPokemon4(){
         vaciarSeleccion();
+        pk4.setSeleccionado(true);
         if(salud4.getText().charAt(0)=='0'){
             metapod.setStyle("-fx-background-color:  #E38F6D");
             siguiente.setDisable(true);
@@ -181,6 +185,7 @@ public class Controller {
     @FXML
     public void selectPokemon5(){
         vaciarSeleccion();
+        pk5.setSeleccionado(true);
         if(salud5.getText().charAt(0)=='0'){
             mew.setStyle("-fx-background-color:  #E38F6D");
             siguiente.setDisable(true);
@@ -192,6 +197,7 @@ public class Controller {
     @FXML
     public void selectPokemon6(){
         vaciarSeleccion();
+        pk6.setSeleccionado(true);
         if(salud6.getText().charAt(0)=='0'){
             magikarp.setStyle("-fx-background-color:  #E38F6D");
             siguiente.setDisable(true);
@@ -203,6 +209,12 @@ public class Controller {
 
     private void vaciarSeleccion() {
         lugia.setStyle("-fx-background-color:  #5260a1");
+        pk1.setSeleccionado(false);
+        pk2.setSeleccionado(false);
+        pk3.setSeleccionado(false);
+        pk4.setSeleccionado(false);
+        pk5.setSeleccionado(false);
+        pk6.setSeleccionado(false);
         sylveon.setStyle("-fx-background-color:  #5260a1");
         ditto.setStyle("-fx-background-color:  #5260a1");
         metapod.setStyle("-fx-background-color:  #5260a1");
@@ -212,10 +224,11 @@ public class Controller {
 
     public void clickarSiguiente(){
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sample2.fxml"));
-            Parent root = fxmlLoader.load();
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("sample2.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
             Stage stage = new Stage();
-            stage.setScene(new Scene(root));
+            stage.setScene(scene);
             stage.show();
 
         } catch (IOException e) {
