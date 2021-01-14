@@ -1,19 +1,23 @@
 package sample;
 
+import javafx.scene.image.Image;
+
 public class Pokemon {
 
     private String nombre;
     private int nivel;
     private int vidaTotal;
     private int vidaRestante;
-    private boolean seleccionado;
+    private Image imagenMenu;
+    private Image imagenPelea;
 
-    public Pokemon(String n, int nv, int vt, int vr){
+    public Pokemon(String n, int nv, int vt, int vr, Image imagenMenu, Image imagenPelea){
         this.nombre=n;
         this.nivel=nv;
         this.vidaTotal=vt;
         this.vidaRestante=vr;
-        this.seleccionado=false;
+        this.imagenMenu=imagenMenu;
+        this.imagenPelea=imagenPelea;
     }
 
     //HAGO LOS GET POR HACER LOS ATRIBUTOS PRIVADOS
@@ -33,8 +37,15 @@ public class Pokemon {
     public int getVidaRestante() {
         return vidaRestante;
     }
+    public Image getImagenMenu() {
+        return imagenMenu;
+    }
 
-    public void setSeleccionado(boolean s){
-        this.seleccionado=s;
+    public Image getImagenPelea(){
+        return imagenPelea;
+    }
+
+    public void setVidaRestante(int vidaRestante) {
+        this.vidaRestante = vidaRestante;
     }
 }

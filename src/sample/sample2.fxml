@@ -7,15 +7,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane fx:id="back2" alignment="CENTER" focusTraversable="true" style="-fx-background-color: #5260a1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
+<GridPane fx:id="back2" alignment="BOTTOM_CENTER" focusTraversable="true" style="-fx-background-color: #5260a1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
    <children>
-      <GridPane fx:id="lugia" alignment="CENTER">
+      <GridPane fx:id="rival" alignment="CENTER">
          <children>
-            <Label fx:id="nombre1" text="Lugia" textFill="WHITE" />
-            <Label fx:id="nivel1" text="Nv 79" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
-            <ProgressBar fx:id="bar1" prefWidth="200.0" progress="0.82" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-            <Label fx:id="salud1" prefHeight="17.0" prefWidth="52.0" text="230/298" textFill="WHITE" GridPane.rowIndex="3" />
-            <Label layoutX="10.0" layoutY="107.0" text="PS" textAlignment="CENTER" textFill="#d2e550" GridPane.rowIndex="2">
+            <Label fx:id="nombreRival" text="Lugia" textFill="WHITE" />
+            <Label fx:id="nivelRival" text="Nv 79" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+            <ProgressBar fx:id="barRival" prefWidth="200.0" progress="0.82" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <Label fx:id="psRival" layoutX="10.0" layoutY="107.0" onMouseEntered="#mostrarVidaRival" onMouseExited="#mostrarPSrival" text="PS" textAlignment="CENTER" textFill="#d2e550" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
@@ -38,12 +37,9 @@
             <RowConstraints />
          </rowConstraints>
       </GridPane>
-      <GridPane fx:id="mipokemon" layoutX="220.0" layoutY="10.0" GridPane.rowIndex="1">
+      <GridPane layoutX="220.0" layoutY="10.0" GridPane.rowIndex="1">
          <children>
-            <ImageView fitHeight="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.halignment="CENTER">
-               <image>
-                  <Image url="file:/C:/Users/jaime/Desktop/diseños/pokemon/metapod.png" />
-               </image></ImageView>
+            <ImageView fx:id="imagenMiPk" fitHeight="170.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -56,13 +52,12 @@
             <RowConstraints />
          </rowConstraints>
       </GridPane>
-      <GridPane fx:id="mew" layoutX="10.0" layoutY="135.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <GridPane fx:id="miPk" alignment="BOTTOM_RIGHT" layoutX="10.0" layoutY="135.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
          <children>
-            <Label fx:id="nombre5" text="Mew" textFill="WHITE" />
-            <Label fx:id="nivel5" text="Nv 42" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
-            <ProgressBar fx:id="bar5" prefWidth="200.0" progress="0.45" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-            <Label fx:id="salud5" prefHeight="17.0" prefWidth="46.0" text="80/220" textFill="WHITE" GridPane.rowIndex="2" />
-            <Label layoutX="10.0" layoutY="107.0" text="PS" textFill="#d2e550" GridPane.rowIndex="1">
+            <Label fx:id="nombreMiPk" text="Mew" textFill="WHITE" />
+            <Label fx:id="nivelMiPk" text="Nv 42" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+            <ProgressBar fx:id="barMiPk" prefWidth="200.0" progress="0.45" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+            <Label fx:id="psMiPk" layoutX="10.0" layoutY="107.0" onMouseEntered="#mostrarVidaMiPk" onMouseExited="#mostrarPSmiPk" text="PS" textFill="#d2e550" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
@@ -89,10 +84,7 @@
             <Insets left="20.0" />
          </GridPane.margin>
       </Label>
-      <ImageView fitHeight="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0">
-         <image>
-            <Image url="file:/C:/Users/jaime/Desktop/diseños/pokemon/pikachu.png" />
-         </image>
+      <ImageView fx:id="imagenRival" fitHeight="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0">
          <viewport>
             <Rectangle2D />
          </viewport></ImageView>
@@ -106,12 +98,12 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="atacar" alignment="CENTER" mnemonicParsing="false" text="ATACAR" textAlignment="CENTER" GridPane.rowIndex="1" />
-            <Button fx:id="curar" mnemonicParsing="false" text="CURAR" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="ataque1" mnemonicParsing="false" text="ATAQUE1" visible="false" />
-            <Button fx:id="ataque2" mnemonicParsing="false" text="ATAQUE2" visible="false" GridPane.columnIndex="1" />
-            <Button fx:id="ataque3" mnemonicParsing="false" text="ATAQUE3" visible="false" GridPane.rowIndex="1" />
-            <Button fx:id="ataque4" mnemonicParsing="false" text="ATAQUE4" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="atacar" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#atacar" text="ATACAR" GridPane.rowIndex="0" GridPane.rowSpan="2" />
+            <Button fx:id="curar" mnemonicParsing="false" onMouseClicked="#curar" text="CURAR" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.rowSpan="2" />
+            <Button fx:id="ataque1" mnemonicParsing="false" onMouseClicked="#ataque1" text="ATAQUE1" visible="false" />
+            <Button fx:id="ataque2" mnemonicParsing="false" onMouseClicked="#ataque2" text="ATAQUE2" visible="false" GridPane.columnIndex="1" />
+            <Button fx:id="ataque3" mnemonicParsing="false" onMouseClicked="#ataque3" text="ATAQUE3" visible="false" GridPane.rowIndex="1" />
+            <Button fx:id="cancelar" mnemonicParsing="false" onMouseClicked="#cancelar" text="CANCELAR" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </children>
