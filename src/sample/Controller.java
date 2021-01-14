@@ -3,6 +3,7 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
@@ -32,7 +33,7 @@ public class Controller {
 
     //LABEL SIGUIENTE
     @FXML
-    public Label siguiente;
+    public Button siguiente;
 
     //OBJETO POKEMON AUXILIAR PARA PASAR AL CONTROLLER 2
     Pokemon pokemonAux;
