@@ -104,8 +104,9 @@ public class Controller2 {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("POKEMON");
         alert.setContentText("¿Qué deseas hacer?");
+        alert.setGraphic(new ImageView(miPokemon.getImagenMenu()));
         if (ganada) {
-            alert.setHeaderText("¡¡¡¡VICTORIA!!!!");
+            alert.setHeaderText("Victoria de "+miPokemon.getNombre());
 
             ButtonType pokemones = new ButtonType("Volver a mi equipo");
             ButtonType salir = new ButtonType("Salir");
@@ -119,7 +120,7 @@ public class Controller2 {
                 atacar.getScene().getWindow().hide();
             }
         }else{
-            alert.setHeaderText("¡¡¡¡DERROTA!!!!");
+            alert.setHeaderText("Derrota de "+miPokemon.getNombre());
 
             ButtonType pokemones = new ButtonType("Probar con otro Pokemon");
             ButtonType salir = new ButtonType("Huir");
