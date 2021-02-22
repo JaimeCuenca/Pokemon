@@ -31,9 +31,11 @@ public class Controller {
     @FXML
     public ImageView imagen1, imagen2,imagen3, imagen4, imagen5, imagen6;
 
-    //LABEL SIGUIENTE
+    //LABEL SIGUIENTE Y ESTADISTICAS
     @FXML
     public Button siguiente;
+    @FXML
+    public Button estadisticas;
 
     //OBJETO POKEMON AUXILIAR PARA PASAR AL CONTROLLER 2
     Pokemon pokemonAux;
@@ -92,6 +94,7 @@ public class Controller {
             siguiente.setDisable(false);
             pokemonAux=pk1;
         }
+        estadisticas.setDisable(false);
     }
     @FXML
     public void selectPokemon2(){
@@ -104,6 +107,7 @@ public class Controller {
             siguiente.setDisable(false);
             pokemonAux=pk2;
         }
+        estadisticas.setDisable(false);
     }
     @FXML
     public void selectPokemon3(){
@@ -116,6 +120,7 @@ public class Controller {
             siguiente.setDisable(false);
             pokemonAux=pk3;
         }
+        estadisticas.setDisable(false);
     }
     @FXML
     public void selectPokemon4(){
@@ -128,6 +133,7 @@ public class Controller {
             siguiente.setDisable(false);
             pokemonAux=pk4;
         }
+        estadisticas.setDisable(false);
     }
     @FXML
     public void selectPokemon5(){
@@ -140,6 +146,7 @@ public class Controller {
             siguiente.setDisable(false);
             pokemonAux=pk5;
         }
+        estadisticas.setDisable(false);
     }
     @FXML
     public void selectPokemon6(){
@@ -152,6 +159,7 @@ public class Controller {
             siguiente.setDisable(false);
             pokemonAux=pk6;
         }
+        estadisticas.setDisable(false);
     }
 
     private void vaciarSeleccion() {
@@ -166,6 +174,7 @@ public class Controller {
     //METODO PARA PASAR A LA VENTANA DEPELEA AL PULSAR SIGUIENTE CON UN POKEMON ELEGIDO
     public void clickarSiguiente(){
         try{
+            pokemonAux.elegido();
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource("sample2.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 600, 400);
@@ -183,10 +192,30 @@ public class Controller {
         }
     }
 
+    //METODOPARA ABRIR LAS ESTADISTICAS
+    public void clickarEstadisticas(){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("sample3.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+            Stage stage = new Stage();
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.show();
+            Controller3 controller3 = fxmlLoader.getController();
+            controller3.pasarDatos(pokemonAux, this);
+            Stage stg =(Stage) siguiente.getScene().getWindow();
+            stg.hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     //METODO PARA EL CALLBACK DESDE EL CONTROLLER 2 PARA PASAR LA INFO DEL POKEMON TRAS LA BATALLA
     public void devolverPokemon(Pokemon pokemon){
         vaciarSeleccion();
         siguiente.setDisable(true);
+        estadisticas.setDisable(true);
         Stage stg = (Stage) siguiente.getScene().getWindow();
         stg.show();
 

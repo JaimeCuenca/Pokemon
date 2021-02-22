@@ -10,6 +10,9 @@ public class Pokemon {
     private int vidaRestante;
     private Image imagenMenu;
     private Image imagenPelea;
+    private int ataqueHecho;
+    private int danioRecibido;
+    private int elegido = 0;
 
     public Pokemon(String n, int nv, int vt, int vr, Image imagenMenu, Image imagenPelea){
         this.nombre=n;
@@ -18,6 +21,8 @@ public class Pokemon {
         this.vidaRestante=vr;
         this.imagenMenu=imagenMenu;
         this.imagenPelea=imagenPelea;
+        this.ataqueHecho = 0;
+        this.danioRecibido = 0;
     }
 
     //HAGO LOS GET POR HACER LOS ATRIBUTOS PRIVADOS
@@ -47,5 +52,26 @@ public class Pokemon {
 
     public void setVidaRestante(int vidaRestante) {
         this.vidaRestante = vidaRestante;
+    }
+
+    public int getAtaqueHecho() {
+        return ataqueHecho;
+    }
+    public void setAtaqueHecho(int ataque){
+        this.ataqueHecho+=ataque;
+    }
+
+    public int getDanioRecibido() {
+        return danioRecibido;
+    }
+    public void setDanioRecibido(int danio){
+        this.danioRecibido+=danio;
+    }
+
+    public int getElegido(){
+        return elegido;
+    }
+    public void elegido(){
+        this.elegido++;
     }
 }

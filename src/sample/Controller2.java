@@ -82,14 +82,18 @@ public class Controller2 {
 
     //MÉTODO DE REDUCCION DE LA VIDA DE LOS POKEMONES CUANDO SE UTILIZA ALGUN ATAQUE
     private void ataque(int num1, int num2){
-        rivalPokemon.setVidaRestante(rivalPokemon.getVidaRestante()-ThreadLocalRandom.current().nextInt(num1, num2));
+        var ataque = ThreadLocalRandom.current().nextInt(num1, num2);
+        miPokemon.setAtaqueHecho(ataque);
+        rivalPokemon.setVidaRestante(rivalPokemon.getVidaRestante()-ataque);
         barRival.setProgress((float) rivalPokemon.getVidaRestante()/ (float) rivalPokemon.getVidaTotal());
         if (rivalPokemon.getVidaRestante()<1) {
             rivalPokemon.setVidaRestante(0);
             ganada=true;
             finBatalla();
         }else{
-            miPokemon.setVidaRestante(miPokemon.getVidaRestante()-ThreadLocalRandom.current().nextInt(num1, num2));
+            var danio = ThreadLocalRandom.current().nextInt(num1, num2);
+            miPokemon.setDanioRecibido(danio);
+            miPokemon.setVidaRestante(miPokemon.getVidaRestante()-danio);
             barMiPk.setProgress((float) miPokemon.getVidaRestante() / (float) miPokemon.getVidaTotal());
             if(miPokemon.getVidaRestante()<1) {
                 miPokemon.setVidaRestante(0);
